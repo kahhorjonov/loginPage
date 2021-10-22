@@ -4,10 +4,15 @@ import UserStore from "./stores/UserStore";
 class SubmitButton extends React.Component {
   render() {
     return (
-      <>
-        fewf
-        {/* <UserStore /> */}
-      </>
+      <div className="submitButton">
+        <button
+          className="btn"
+          disabled={this.props.disabled}
+          onClick={() => this.props.onClick()}
+        >
+          {this.props.text}
+        </button>
+      </div>
     );
   }
 }
